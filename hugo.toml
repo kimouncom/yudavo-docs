@@ -2,3 +2,19 @@ baseURL = 'https://docs.yudavo.fr/'
 theme = 'hugo-book'
 locale = 'fr-fr'
 title = 'Documentation Yudavo'
+
+[menu]
+[[menu.home]]
+  name = 'Documentation'
+  pageRef = '/docs/'
+  weight = 1
+
+[[menu.home]]
+  name = 'Référence API'
+  url = '/reference/'
+  weight = 2
+
+[[menu.home]]
+  name = 'Kimoun'
+  url = 'https://kimoun.com'
+  weight = 3

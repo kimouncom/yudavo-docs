@@ -1,0 +1,220 @@
+.book-layout-landing {
+  --yudavo-accent: #1b5cb8;
+  --yudavo-accent-strong: #154a95;
+  --yudavo-surface: #f5f7fb;
+  --yudavo-border: #d6deeb;
+  --yudavo-text-soft: #526179;
+}
+
+.book-layout-landing .book-page {
+  padding: 24px;
+}
+
+.book-layout-landing .book-header {
+  margin: 0 auto 24px;
+  max-width: 1120px;
+}
+
+.book-layout-landing .book-header nav > ul {
+  align-items: center;
+  border-bottom: 1px solid var(--yudavo-border);
+  padding-bottom: 14px;
+}
+
+.book-layout-landing .book-header a {
+  color: var(--body-font-color);
+  font-weight: 600;
+}
+
+.book-layout-landing .book-header a[href]:hover,
+.book-layout-landing .book-header a.active {
+  color: var(--yudavo-accent);
+  opacity: 1;
+}
+
+.yudavo-home {
+  margin: 0 auto;
+  max-width: 1120px;
+}
+
+.yudavo-hero {
+  border: 1px solid var(--yudavo-border);
+  border-radius: 28px;
+  padding: 56px;
+  background-color: #fbfcfe;
+}
+
+.yudavo-kicker,
+.yudavo-section-label {
+  color: var(--yudavo-accent);
+  font-size: 0.9rem;
+  font-weight: 700;
+  margin: 0 0 16px;
+}
+
+.yudavo-logo {
+  display: block;
+  height: 34px;
+  margin-bottom: 24px;
+  width: auto;
+}
+
+.yudavo-home h1,
+.yudavo-home h2 {
+  text-wrap: balance;
+}
+
+.yudavo-home h1 {
+  font-size: clamp(2.8rem, 6vw, 5rem);
+  line-height: 0.94;
+  margin: 0;
+  max-width: 12ch;
+}
+
+.yudavo-home h2 {
+  font-size: clamp(1.4rem, 2.2vw, 2rem);
+  line-height: 1.05;
+  margin: 0 0 12px;
+}
+
+.yudavo-intro,
+.yudavo-home p {
+  color: var(--yudavo-text-soft);
+  text-wrap: pretty;
+}
+
+.yudavo-intro {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  margin: 24px 0 0;
+  max-width: 62ch;
+}
+
+.yudavo-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.yudavo-button {
+  align-items: center;
+  border: 1px solid var(--yudavo-border);
+  border-radius: 999px;
+  color: var(--body-font-color);
+  display: inline-flex;
+  font-weight: 700;
+  justify-content: center;
+  min-height: 48px;
+  padding: 0 22px;
+}
+
+.yudavo-button[href]:hover {
+  opacity: 1;
+}
+
+.yudavo-button-primary {
+  background: var(--yudavo-accent);
+  border-color: var(--yudavo-accent);
+  color: #fff;
+}
+
+.yudavo-button-primary[href]:hover {
+  background: var(--yudavo-accent-strong);
+  color: #fff;
+}
+
+.yudavo-grid {
+  display: grid;
+  gap: 18px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  margin-top: 22px;
+}
+
+.yudavo-card,
+.yudavo-panel {
+  background: var(--yudavo-surface);
+  border: 1px solid var(--yudavo-border);
+  border-radius: 24px;
+}
+
+.yudavo-card {
+  padding: 28px;
+}
+
+.yudavo-card p,
+.yudavo-panel p {
+  margin: 0;
+}
+
+.yudavo-panel {
+  align-items: start;
+  display: grid;
+  gap: 24px;
+  grid-template-columns: minmax(0, 1.4fr) minmax(280px, 0.8fr);
+  margin-top: 22px;
+  padding: 32px;
+}
+
+.yudavo-links {
+  display: grid;
+  gap: 12px;
+}
+
+.yudavo-links a {
+  align-items: center;
+  background: #fff;
+  border: 1px solid var(--yudavo-border);
+  border-radius: 18px;
+  color: var(--body-font-color);
+  display: flex;
+  font-weight: 600;
+  justify-content: space-between;
+  min-height: 58px;
+  padding: 0 18px;
+}
+
+.yudavo-links a::after {
+  color: var(--yudavo-accent);
+  content: "→";
+  font-size: 1.1rem;
+}
+
+@media screen and (max-width: 960px) {
+  .yudavo-grid,
+  .yudavo-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .yudavo-hero {
+    padding: 36px 28px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .book-layout-landing .book-page {
+    padding: 18px;
+  }
+
+  .book-layout-landing .book-header nav > ul {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .yudavo-home h1 {
+    font-size: 2.55rem;
+  }
+
+  .yudavo-intro {
+    font-size: 1rem;
+  }
+
+  .yudavo-actions {
+    flex-direction: column;
+  }
+
+  .yudavo-button {
+    width: 100%;
+  }
+}
