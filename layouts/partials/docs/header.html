@@ -1,0 +1,24 @@
+<div class="yudavo-docs-topbar">
+  <div class="yudavo-docs-topbar-brand">
+    <a class="yudavo-docs-brand" href="{{ "/" | relURL }}">
+      <img src="{{ "images/yudavo-logo.png" | relURL }}" alt="Yudavo" />
+      <span class="yudavo-docs-eyebrow">Documentation développeurs</span>
+    </a>
+  </div>
+
+  <nav class="yudavo-docs-topnav" aria-label="Navigation principale">
+    {{ partial "docs/menu-hugo" (dict "Page" .Page "Menu" .Site.Menus.home) }}
+  </nav>
+
+  <div class="yudavo-docs-mobile-actions">
+    <label for="menu-control" aria-label="{{ partial "docs/text/i18n" "Menu" }}">
+      <img src="{{ partial "docs/icon" "menu" }}" class="book-icon" alt="{{ partial "docs/text/i18n" "Menu" }}" />
+    </label>
+
+    {{ if partial "docs/toc-show" . }}
+    <label for="toc-control" aria-label="{{ partial "docs/text/i18n" "Table of Contents" }}">
+      <img src="{{ partial "docs/icon" "toc" }}" class="book-icon" alt="{{ partial "docs/text/i18n" "Table of Contents" }}" />
+    </label>
+    {{ end }}
+  </div>
+</div>

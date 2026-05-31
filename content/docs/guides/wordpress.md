@@ -32,7 +32,7 @@ Le plugin ne stocke pas les reservations et ne doit jamais contenir de secrets b
 
 1. Copiez le plugin dans `wp-content/plugins/`.
 2. Activez-le dans `Extensions`.
-3. Ouvrez `Reglages > Randevou`.
+3. Ouvrez `Reglages > Yudavo`.
 4. Renseignez les valeurs publiques du widget.
 5. Ajoutez le shortcode dans une page ou un article.
 
@@ -75,13 +75,13 @@ https://api.example.com/randevou/randevou-widget.js
 Shortcode minimal :
 
 ```text
-[randevou]
+[yudavo]
 ```
 
 Exemple avec surcharges locales :
 
 ```text
-[randevou
+[yudavo
   appointment_title="Rendez-vous de découverte"
   appointment_duration="45 min"
   accent_color="#0f6fff"
@@ -121,7 +121,7 @@ Priorite des valeurs :
 
 ## Plusieurs widgets sur une meme page
 
-Le plugin supporte plusieurs shortcodes `[randevou]` sur une meme page.
+Le plugin supporte plusieurs shortcodes `[yudavo]` sur une meme page.
 
 Comportement actuel :
 
@@ -148,7 +148,7 @@ Le plugin est volontairement limite aux valeurs publiques exposees au navigateur
 
 Verifiez :
 
-- que le shortcode `[randevou]` est present dans le contenu rendu ;
+- que le shortcode `[yudavo]` est present dans le contenu rendu ;
 - que `API base URL` et `Organisation slug` sont bien renseignes ;
 - que le script `.../randevou/randevou-widget.js` est accessible ;
 - que le theme ou un constructeur de page ne supprime pas le shortcode cote rendu.
@@ -164,7 +164,7 @@ Verifiez :
 
 ### Message admin de configuration incomplete
 
-Le plugin affiche un avertissement aux administrateurs si `API base URL` ou `Organisation slug` manque dans `Reglages > Randevou`.
+Le plugin affiche un avertissement aux administrateurs si `API base URL` ou `Organisation slug` manque dans `Reglages > Yudavo`.
 
 ## Recommandation de mise en production
 

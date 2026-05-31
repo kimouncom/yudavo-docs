@@ -31,7 +31,7 @@ Le mode recommande est l'integration declarative avec un conteneur HTML et le sc
 
 ```html
 <div
-  data-randevou-widget
+  data-yudavo-widget
   data-api-base-url="https://api.example.com"
   data-tenant-slug="cabinet-martin"
   data-publishable-key="rdv_key_live_example"
@@ -53,8 +53,8 @@ Le mode recommande est l'integration declarative avec un conteneur HTML et le sc
 
 Au chargement de la page, le script recherche automatiquement :
 
-- les elements portant `data-randevou-widget` ;
-- l'element `#randevou-booking` pour compatibilite.
+- les elements portant `data-yudavo-widget` ;
+- l'element `#yudavo-booking`.
 
 Le plugin WordPress officiel genere lui-meme ce markup et laisse le widget s'auto-monter.
 
@@ -106,12 +106,12 @@ Valeurs par defaut du runtime widget :
 Si vous voulez controler explicitement le montage via JavaScript, le widget expose `window.Randevou.init()` et `window.Randevou.mount()`.
 
 ```html
-<div id="randevou-booking"></div>
+<div id="yudavo-booking"></div>
 <script src="https://api.example.com/randevou/randevou-widget.js" defer></script>
 <script>
   window.addEventListener("DOMContentLoaded", function () {
     window.Randevou.init({
-      target: "#randevou-booking",
+      target: "#yudavo-booking",
       apiBaseUrl: "https://api.example.com",
       tenantSlug: "cabinet-martin",
       publishableKey: "rdv_key_live_example",

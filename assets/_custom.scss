@@ -6,13 +6,83 @@
   --yudavo-text-soft: #526179;
 }
 
+.book-page > .book-header.hidden {
+  display: block;
+}
+
 .book-layout-landing .book-page {
   padding: 24px;
+}
+
+.book-header {
+  margin: 0 auto 24px;
+  max-width: 1120px;
 }
 
 .book-layout-landing .book-header {
   margin: 0 auto 24px;
   max-width: 1120px;
+}
+
+.yudavo-docs-topbar {
+  align-items: center;
+  background: rgba(255, 255, 255, 0.95);
+  border-bottom: 1px solid var(--yudavo-border);
+  display: grid;
+  gap: 20px;
+  grid-template-columns: auto 1fr auto;
+  min-height: 56px;
+  padding: 0 24px 14px;
+}
+
+.yudavo-docs-brand {
+  align-items: center;
+  color: var(--body-font-color);
+  display: inline-flex;
+  gap: 12px;
+  text-decoration: none;
+}
+
+.yudavo-docs-brand img {
+  display: block;
+  height: 22px;
+  width: auto;
+}
+
+.yudavo-docs-eyebrow {
+  border-left: 1px solid var(--yudavo-border);
+  color: var(--yudavo-text-soft);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding-left: 12px;
+  text-transform: uppercase;
+}
+
+.yudavo-docs-topnav > ul {
+  align-items: center;
+  display: flex;
+  gap: 18px;
+  justify-content: flex-end;
+}
+
+.yudavo-docs-topnav a {
+  color: var(--yudavo-text-soft);
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.yudavo-docs-topnav a[href]:hover,
+.yudavo-docs-topnav a.active {
+  color: var(--body-font-color);
+  opacity: 1;
+}
+
+.yudavo-docs-topnav li > ul {
+  display: none;
+}
+
+.yudavo-docs-mobile-actions {
+  display: none;
 }
 
 .book-layout-landing .book-header nav > ul {
@@ -195,6 +265,31 @@
 @media screen and (max-width: 640px) {
   .book-layout-landing .book-page {
     padding: 18px;
+  }
+
+  .yudavo-docs-topbar {
+    gap: 12px;
+    grid-template-columns: 1fr auto;
+    padding: 0 16px 12px;
+  }
+
+  .yudavo-docs-eyebrow {
+    display: none;
+  }
+
+  .yudavo-docs-topnav {
+    display: none;
+  }
+
+  .yudavo-docs-mobile-actions {
+    align-items: center;
+    display: inline-flex;
+    gap: 12px;
+  }
+
+  .yudavo-docs-mobile-actions label {
+    display: inline-flex;
+    line-height: 0;
   }
 
   .book-layout-landing .book-header nav > ul {
