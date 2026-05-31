@@ -3,23 +3,11 @@
   {{- $sectionLabel = "Documentation" -}}
 {{- end -}}
 
-<div class="topbar">
+<header class="topbar">
   <a class="brand" href="{{ "/" | relURL }}">
     <img src="{{ "images/yudavo-logo.png" | relURL }}" alt="Yudavo" />
     <span class="eyebrow">{{ $sectionLabel }}</span>
   </a>
 
   <a class="back" href="{{ "/" | relURL }}">← Documentation</a>
-
-  <div class="yudavo-docs-mobile-actions">
-    <label for="menu-control" aria-label="{{ partial "docs/text/i18n" "Menu" }}">
-      <img src="{{ partial "docs/icon" "menu" }}" class="book-icon" alt="{{ partial "docs/text/i18n" "Menu" }}" />
-    </label>
-
-    {{ if partial "docs/toc-show" . }}
-    <label for="toc-control" aria-label="{{ partial "docs/text/i18n" "Table of Contents" }}">
-      <img src="{{ partial "docs/icon" "toc" }}" class="book-icon" alt="{{ partial "docs/text/i18n" "Table of Contents" }}" />
-    </label>
-    {{ end }}
-  </div>
-</div>
+</header>

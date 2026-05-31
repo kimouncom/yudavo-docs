@@ -10,13 +10,17 @@
   display: block;
 }
 
+.book-page > .book-header {
+  margin: -16px -16px 16px;
+}
+
 .book-layout-landing .book-page {
   padding: 24px;
 }
 
 .book-header {
-  margin: 0 auto 24px;
-  max-width: 1120px;
+  margin: 0;
+  max-width: none;
 }
 
 .book-layout-landing .book-header {
@@ -25,20 +29,23 @@
 }
 
 .book-header .topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  display: flex;
   align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  padding: 0 24px;
   background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--yudavo-border);
-  display: grid;
-  gap: 20px;
-  grid-template-columns: auto 1fr auto;
-  min-height: 56px;
-  padding: 0 24px 14px;
 }
 
 .book-header .brand {
-  align-items: center;
-  color: var(--body-font-color);
   display: inline-flex;
+  align-items: center;
   gap: 12px;
   text-decoration: none;
 }
@@ -54,25 +61,28 @@
   color: var(--yudavo-text-soft);
   font-size: 0.75rem;
   font-weight: 600;
+  letter-spacing: 0.06em;
   padding-left: 12px;
   text-transform: uppercase;
 }
 
 .book-header .back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   color: var(--yudavo-text-soft);
-  justify-self: end;
   font-size: 0.875rem;
-  font-weight: 500;
   text-decoration: none;
+  transition: color 0.15s ease;
 }
 
 .book-header .back[href]:hover {
   color: var(--body-font-color);
-  opacity: 1;
 }
 
-.yudavo-docs-mobile-actions {
-  display: none;
+.book-header .back:focus-visible {
+  outline: 2px solid var(--yudavo-accent);
+  outline-offset: 3px;
 }
 
 .book-layout-landing .book-header nav > ul {
@@ -253,33 +263,20 @@
 }
 
 @media screen and (max-width: 640px) {
+  .book-page > .book-header {
+    margin: -16px -16px 16px;
+  }
+
   .book-layout-landing .book-page {
     padding: 18px;
   }
 
   .book-header .topbar {
-    gap: 12px;
-    grid-template-columns: 1fr auto;
-    padding: 0 16px 12px;
+    padding: 0 16px;
   }
 
   .book-header .eyebrow {
     display: none;
-  }
-
-  .book-header .back {
-    display: none;
-  }
-
-  .yudavo-docs-mobile-actions {
-    align-items: center;
-    display: inline-flex;
-    gap: 12px;
-  }
-
-  .yudavo-docs-mobile-actions label {
-    display: inline-flex;
-    line-height: 0;
   }
 
   .book-layout-landing .book-header nav > ul {
