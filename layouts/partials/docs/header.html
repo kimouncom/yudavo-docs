@@ -1,12 +1,15 @@
-<div class="yudavo-docs-topbar">
-  <div class="yudavo-docs-topbar-brand">
-    <a class="yudavo-docs-brand" href="{{ "/" | relURL }}">
-      <img src="{{ "images/yudavo-logo.png" | relURL }}" alt="Yudavo" />
-      <span class="yudavo-docs-eyebrow">Guides développeur</span>
-    </a>
-  </div>
+{{- $sectionLabel := "Guides développeur" -}}
+{{- if eq .RelPermalink "/docs/" -}}
+  {{- $sectionLabel = "Documentation" -}}
+{{- end -}}
 
-  <a class="yudavo-docs-back" href="{{ "/reference/" | relURL }}">← Référence API</a>
+<div class="topbar">
+  <a class="brand" href="{{ "/" | relURL }}">
+    <img src="{{ "images/yudavo-logo.png" | relURL }}" alt="Yudavo" />
+    <span class="eyebrow">{{ $sectionLabel }}</span>
+  </a>
+
+  <a class="back" href="{{ "/" | relURL }}">← Documentation</a>
 
   <div class="yudavo-docs-mobile-actions">
     <label for="menu-control" aria-label="{{ partial "docs/text/i18n" "Menu" }}">

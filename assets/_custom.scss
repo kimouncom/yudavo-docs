@@ -24,7 +24,7 @@
   max-width: 1120px;
 }
 
-.yudavo-docs-topbar {
+.book-header .topbar {
   align-items: center;
   background: rgba(255, 255, 255, 0.95);
   border-bottom: 1px solid var(--yudavo-border);
@@ -35,7 +35,7 @@
   padding: 0 24px 14px;
 }
 
-.yudavo-docs-brand {
+.book-header .brand {
   align-items: center;
   color: var(--body-font-color);
   display: inline-flex;
@@ -43,13 +43,13 @@
   text-decoration: none;
 }
 
-.yudavo-docs-brand img {
+.book-header .brand img {
   display: block;
   height: 22px;
   width: auto;
 }
 
-.yudavo-docs-eyebrow {
+.book-header .eyebrow {
   border-left: 1px solid var(--yudavo-border);
   color: var(--yudavo-text-soft);
   font-size: 0.75rem;
@@ -58,7 +58,7 @@
   text-transform: uppercase;
 }
 
-.yudavo-docs-back {
+.book-header .back {
   color: var(--yudavo-text-soft);
   justify-self: end;
   font-size: 0.875rem;
@@ -66,7 +66,7 @@
   text-decoration: none;
 }
 
-.yudavo-docs-back[href]:hover {
+.book-header .back[href]:hover {
   color: var(--body-font-color);
   opacity: 1;
 }
@@ -257,17 +257,17 @@
     padding: 18px;
   }
 
-  .yudavo-docs-topbar {
+  .book-header .topbar {
     gap: 12px;
     grid-template-columns: 1fr auto;
     padding: 0 16px 12px;
   }
 
-  .yudavo-docs-eyebrow {
+  .book-header .eyebrow {
     display: none;
   }
 
-  .yudavo-docs-back {
+  .book-header .back {
     display: none;
   }
 
