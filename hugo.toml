@@ -1,0 +1,4 @@
+baseURL = 'https://docs.yudavo.fr/'
+theme = 'hugo-book'
+locale = 'fr-fr'
+title = 'Documentation Yudavo'

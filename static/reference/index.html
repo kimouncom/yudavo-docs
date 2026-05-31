@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Référence API — Yudavo</title>
+  <style>
+    :root {
+      --bg:     #FFFFFF;
+      --text:   #0F1728;
+      --muted:  #667085;
+      --blue:   #1B5CB8;
+      --border: #E4E7EC;
+      --font:   "Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: var(--font); }
+
+    .topbar {
+      position: sticky; top: 0; z-index: 20;
+      display: flex; align-items: center; justify-content: space-between;
+      height: 56px; padding: 0 24px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+    }
+    .topbar .brand {
+      display: flex; align-items: center; gap: 12px;
+      text-decoration: none;
+    }
+    .topbar .brand img { height: 22px; width: auto; display: block; }
+    .topbar .eyebrow {
+      font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--muted);
+      padding-left: 12px; border-left: 1px solid var(--border);
+    }
+    .topbar .back {
+      font-size: 0.875rem; color: var(--muted); text-decoration: none;
+      display: inline-flex; align-items: center; gap: 6px;
+      transition: color 0.15s ease;
+    }
+    .topbar .back:hover { color: var(--text); }
+    .topbar .back:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+
+    @media (max-width: 640px) {
+      .topbar { padding: 0 16px; }
+      .topbar .eyebrow { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="/">
+      <img src="/images/yudavo-logo.png" alt="Yudavo"/>
+      <span class="eyebrow">Référence API</span>
+    </a>
+    <a class="back" href="/">← Documentation</a>
+  </header>
+
+  <div id="redoc-container"></div>
+
+  <script src="https://cdn.redoc.ly/redoc/v2.5.0/bundles/redoc.standalone.js"></script>
+  <script>
+    Redoc.init('/openapi.yaml', {
+      // Décale le menu collant de Redoc sous le bandeau de 56px (sinon recouvrement)
+      scrollYOffset: 56,
+      theme: {
+        colors: {
+          primary: { main: '#1B5CB8' }   // --blue : liens, item de menu actif
+        },
+        typography: {
+          fontFamily: '"Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif',
+          headings: {
+            fontFamily: '"Geist", -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif'
+          }
+        },
+        sidebar: { backgroundColor: '#FCFCFD' }   // --bg-soft
+      }
+    }, document.getElementById('redoc-container'));
+  </script>
+</body>
+</html>
