@@ -17,7 +17,6 @@
 
 .book-layout-landing .book-header nav > ul {
   align-items: center;
-  border-bottom: 1px solid var(--yudavo-border);
   padding-bottom: 14px;
 }
 
@@ -68,7 +67,6 @@
   font-size: clamp(2.8rem, 6vw, 5rem);
   line-height: 0.94;
   margin: 0;
-  max-width: 12ch;
 }
 
 .yudavo-home h2 {
@@ -87,7 +85,6 @@
   font-size: 1.15rem;
   line-height: 1.7;
   margin: 24px 0 0;
-  max-width: 62ch;
 }
 
 .yudavo-actions {
@@ -116,6 +113,10 @@
 .yudavo-button-primary {
   background: var(--yudavo-accent);
   border-color: var(--yudavo-accent);
+  color: #fff;
+}
+
+.yudavo-button-primary[href] {
   color: #fff;
 }
 

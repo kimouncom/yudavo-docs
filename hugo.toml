@@ -15,6 +15,6 @@ title = 'Documentation Yudavo'
   weight = 2
 
 [[menu.home]]
-  name = 'Kimoun'
-  url = 'https://kimoun.com'
+  name = 'Yudavo.fr'
+  url = 'https://yudavo.fr'
   weight = 3
