@@ -58,27 +58,17 @@
   text-transform: uppercase;
 }
 
-.yudavo-docs-topnav > ul {
-  align-items: center;
-  display: flex;
-  gap: 18px;
-  justify-content: flex-end;
-}
-
-.yudavo-docs-topnav a {
+.yudavo-docs-back {
   color: var(--yudavo-text-soft);
+  justify-self: end;
   font-size: 0.875rem;
-  font-weight: 600;
+  font-weight: 500;
+  text-decoration: none;
 }
 
-.yudavo-docs-topnav a[href]:hover,
-.yudavo-docs-topnav a.active {
+.yudavo-docs-back[href]:hover {
   color: var(--body-font-color);
   opacity: 1;
-}
-
-.yudavo-docs-topnav li > ul {
-  display: none;
 }
 
 .yudavo-docs-mobile-actions {
@@ -277,7 +267,7 @@
     display: none;
   }
 
-  .yudavo-docs-topnav {
+  .yudavo-docs-back {
     display: none;
   }
 
